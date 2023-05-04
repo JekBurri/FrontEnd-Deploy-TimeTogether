@@ -1,0 +1,210 @@
+//! COLOR VARIABLES
+$primary: #fccf00;
+$secondary: #488186;
+$temp1: #c33547;
+$temp2: #f3b3ba;
+$temp3: #95d1d3;
+$temp4: #f97937;
+$temp5: #777db9;
+$temp6: #d9d9d9;
+$white: #ffffff;
+$black: #000000;
+
+// Font Family Variables
+$font-family-inter: 'Inter', sans-serif;
+$font-family-lato: 'Lato', sans-serif;
+
+
+//! STATIC IMAGE URLS
+/* https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80 */
+/* https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=712&q=80 */
+/* https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 */
+/* https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 */
+
+//!  TYPOGRAPHY
+body {
+  color: $black;
+  font-family: $font-family-lato;
+}
+
+
+@mixin headers($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+h1 {
+  @include headers;
+  font-size: 1.75rem;
+  line-height: 30px;
+}
+
+h2 {
+  @include headers;
+  font-size: 1.25rem;
+  line-height: 28px;
+}
+
+h3 {
+  @include headers;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+p {
+  font-family: Lato;
+}
+
+//! ICONS
+// included in static assets folder
+
+//  rectangle buttons
+
+// Button Text
+// #D9D9D9 border-radius: 5dp/pt Inter Regular 18px #000000
+// Button Text
+// #FFFFFF border-radius: 5dp/pt Inter Regular 18px #000000
+// Button yello Text
+// #FFE15C border-radius: 5dp/pt Lato Regular 18px #000000
+
+//! Rectangle Button
+
+@mixin rectButtons {
+  font-size: 1.25rem;
+  color: #000000;
+  border-radius: 5px;
+}
+
+.rectButtonGray {
+  @include rectButtons;
+  font-family: Inter;
+  background-color: #d9d9d9;
+}
+
+.rectButtonWhite {
+  @include rectButtons;
+  font-family: Inter;
+  background-color: #ffffff;
+}
+
+.rectButtonYellow {
+  @include rectButtons;
+  font-family: $font-family-lato;
+  background-color: #ffe15c;
+}
+
+// Big Oval buttons
+// Button Text
+// #FFFFF border-radius: 50dp/pt Lato Regular 16px 1 rem #000000
+// Button Text
+// #D9D9D9 border-radius: 50dp/pt Lato Regular 16px #000000
+// Button Text
+// #FFE15C border-radius: 50dp/pt Lato Regular 16px #000000
+
+
+@mixin bigOvalButtons {
+  font-size: 1rem;
+  font-family: $font-family-lato;
+  border-radius: 50dp/pt;
+}
+
+.bigOvalButtonWhite {
+  @include bigOvalButton;
+  background-color: #ffffff;
+}
+
+.bigOvalButtonYellow {
+  @include bigOvalButton;
+  background-color: #ffe15c;
+}
+
+
+.bigOvalButtonGray {
+  @include bigOvalButtons;
+  background-color: #d9d9d9;
+}
+
+// small Oval buttons
+
+// #FFFFF border-radius: 20dp/pt Lato Regular 15px #000000
+
+// #D9D9D9 border-radius: 20dp/pt Lato Regular 15px #000000
+
+// #FFE15C border-radius: 15dp/pt Lato Regular 15px #000000
+
+@mixin smallOvalButton {
+  font-size: 0.938;
+  font-family: $font-family-lato;
+  color: #000000;
+}
+
+.smallOvalButtonWhite {
+  @include smallOvalButton;
+  background-color: #ffffff;
+  border-radius: 20dp/pt;
+}
+
+.smallOvalButtonYellow {
+  @include smallOvalButton;
+  background-color: #ffe15c;
+  border-radius: 15dp/pt;
+}
+
+.smallOvalButtonGray {
+  @include smallOvalButton;
+  background-color: #d9d9d9;
+  border-radius: 20dp/pt;
+}
+
+.profile-photo-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-photo-square {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+
+.group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.group-item {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+&:hover {
+  background-color: #e6e6e6
+}
+
+.group-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.group-name {
+  flex: 1;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.group-arrow {
+  font-size: 20px;
+  color: #666;
+}
